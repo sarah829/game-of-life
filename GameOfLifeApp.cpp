@@ -11,7 +11,7 @@ bool GameOfLifeWindowApp::OnInit()
 {
   GameOfLifeFrame* game_of_life_frame = new GameOfLifeFrame(30, 30);
 
-  // arbitar
+  // arbitrary start
   game_of_life_frame->game->ToggleElement(9, 9);
   game_of_life_frame->game->ToggleElement(10, 10);
   game_of_life_frame->game->ToggleElement(12, 10);
@@ -35,5 +35,6 @@ bool GameOfLifeWindowApp::OnInit()
   game_of_life_frame->game->ToggleElement(4, 6);
   game_of_life_frame->Show(true);
 
+  game_of_life_frame->timer->Start(game_of_life_frame->speed);
   return true;
 }
