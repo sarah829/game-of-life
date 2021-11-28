@@ -1,6 +1,19 @@
-//
-// Created by Sarah Youngquist on 6/2/21.
-//
+/*
+  File name: GraphicsGameClasses.h
+  @author: Sarah Youngquist
+  Purpose: Defines graphical versions of the classes needed for the game
+  Classes:
+    GraphicsGridElement (extends GridElement):
+      Attaches a color, a panel, and a parent game to GameElement
+    GraphicsArrayGame (extends SimpleArrayGame):
+      Adds a window to SimpleArrayGame to methods to initialize the grid
+    GraphicsElementPanel (extends wxPanel):
+      Controls the OnClick behavior of grid elements
+  History:
+  Date             Action
+  2021-06-02/3/4   Initial coding
+  2021-11-28       Added additional documentation
+ */
 
 #include "SimpleArrayGame.h"
 #include <wx/wxprec.h>
@@ -56,7 +69,7 @@ class GraphicsArrayGame : public SimpleArrayGame {
   void AddPanels(wxGridSizer* gs);
   virtual void InitializeGrid();
   virtual void Clear();
-  bool IsModify();
+  bool IsModify() const;
   void SetModify(bool mod);
  private:
   bool modify;

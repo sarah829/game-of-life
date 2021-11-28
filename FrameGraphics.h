@@ -1,6 +1,17 @@
-//
-// Created by Sarah Youngquist on 6/2/21.
-//
+/*
+  File name: FrameGraphics.h
+  @author: Sarah Youngquist
+  Purpose: Defines the frame for the game which controls all interactive GUI components
+  Classes:
+    GameOfLifeFrame (extends wxFrame):
+      Frame with all buttons and the grid. It has a corresponding game.
+    GameTimer (extends wxTimer):
+      Timer that keeps track of if the game is currently active and provides time intervals for changing state
+  History:
+  Date             Action
+  2021-06-02/3/4   Initial coding
+  2021-11-28       Added additional documentation
+ */
 
 #include "GraphicsGameClasses.h"
 #include <wx/wxprec.h>
@@ -41,15 +52,6 @@ class GameOfLifeFrame : public wxFrame
   wxToggleButton* choose_squares;
   wxButton* slow_button;
   wxButton* fast_button;
-};
-
-class GameOfLifeWindowApp : public wxApp {
- public:
-  virtual bool OnInit();
-  int GetMoves();
-  void SetMoves(int moves);
- private:
-  int moves_;
 };
 
 class GameTimer : public wxTimer

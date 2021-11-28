@@ -2,7 +2,7 @@
 // Created by Sarah Youngquist on 6/2/21.
 //
 #include "SimpleArrayGame.h"
-#include "windowGraphics.h"
+#include "FrameGraphics.h"
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
@@ -148,7 +148,7 @@ void GraphicsArrayGame::SetGridWindow(wxWindow *grid_window) {
   p_grid_window = grid_window;
 }
 
-bool GraphicsArrayGame::IsModify()
+bool GraphicsArrayGame::IsModify() const
 {
   return modify;
 }

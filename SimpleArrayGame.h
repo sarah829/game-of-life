@@ -1,6 +1,19 @@
-//
-// Created by Sarah Youngquist on 5/28/21.
-//
+/*
+  File name: GraphicsGameClasses.h
+  @author: Sarah Youngquist
+  Purpose: Contains the main logic of the game. This header has the functionalities required to have a non-interactive
+    version run through the console.
+  Classes:
+    SimpleArrayGame:
+      This is the class that contains a grid for the game and defines all game logic. It has methods to advance
+      between states in the game.
+    GridElement:
+      Each element has a bool for on/off keeps track of how many neighbors are on.
+  History:
+  Date               Action
+  2021-05-28/29/30   Initial coding
+  2021-11-28         Added additional documentation
+ */
 
 #ifndef GAMEOFLIFE__SIMPLEARRAYGAME_H_
 #define GAMEOFLIFE__SIMPLEARRAYGAME_H_
